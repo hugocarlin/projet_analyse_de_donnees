@@ -19,12 +19,12 @@ library(ggplot2)
 ########## PRÉPARATION DES DONNÉES
 
 ### Import des données
-hosp <- read_delim("/Users/hugocarlin/Documents/Université/Master SEP/M2/S1/SEP0931 - Analyse de données/Projets/Projet final/Projet_final_ADD_HugoCarlin_AyoubBridaoui/data/hosp.csv", 
+hosp <- read_delim("data/hosp.csv", 
                    ";", escape_double = FALSE, trim_ws = TRUE)
 hosp <- hosp[,-c(6)]
-vaccin <- read_delim("/Users/hugocarlin/Documents/Université/Master SEP/M2/S1/SEP0931 - Analyse de données/Projets/Projet final/Projet_final_ADD_HugoCarlin_AyoubBridaoui/data/vaccin.csv", 
+vaccin <- read_delim("data/vaccin.csv", 
                      ";", escape_double = FALSE, trim_ws = TRUE)
-pop <- read_excel("/Users/hugocarlin/Documents/Université/Master SEP/M2/S1/SEP0931 - Analyse de données/Projets/Projet final/Projet_final_ADD_HugoCarlin_AyoubBridaoui/data/pop.xlsx", 
+pop <- read_excel("data/pop.xlsx", 
                   sheet = "2021", skip = 4)
 pop <- pop[,c(1,3:8)]
 pop <- rename.variable(pop, c("...1","0 à 19 ans...3","20 à 39 ans...4","40 à 59 ans...5",
